@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".clientes.ActivityAtualizarCliente">
+
+    <TextView
+        android:id="@+id/title_cadastrar_cliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/atualizarCliente"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+
+    <View
+        android:id="@+id/container_components"
+        style="@style/ContainerComponentsCadCliente"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_cadastrar_cliente" />
+
+    <View
+        android:id="@+id/viewImagemCliente"
+        style="@style/ContainerComponentsProduto"
+
+        app:layout_constraintStart_toStartOf="@+id/container_components"
+        app:layout_constraintTop_toTopOf="@+id/container_components" />
+
+    <ImageView
+        android:id="@+id/imagemCliente"
+        android:layout_width="130sp"
+        android:layout_height="130sp"
+        android:src="@drawable/ic_foto"
+        app:layout_constraintBottom_toBottomOf="@+id/viewImagemCliente"
+        app:layout_constraintEnd_toEndOf="@+id/viewImagemCliente"
+        app:layout_constraintStart_toStartOf="@+id/viewImagemCliente"
+        app:layout_constraintTop_toTopOf="@+id/viewImagemCliente"
+        tools:ignore="ContentDescription" />
+
+    <EditText
+        android:id="@+id/edit_nome_cliente"
+        style="@style/Edit_Text"
+        android:autofillHints=""
+        android:drawableEnd="@drawable/ic_person"
+        android:hint="@string/NomeCliente"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@id/container_components"
+        app:layout_constraintStart_toStartOf="@id/container_components"
+        app:layout_constraintTop_toBottomOf="@+id/viewImagemCliente"
+        tools:ignore="VisualLintTextFieldSize" />
+
+    <EditText
+        style="@style/Edit_Text"
+        android:id="@+id/edit_cpf"
+        android:hint="@string/CpfCliente"
+        android:inputType="numberSigned"
+        android:drawableEnd="@drawable/ic_cpf"
+        app:layout_constraintStart_toStartOf="@id/container_components"
+        app:layout_constraintEnd_toEndOf="@id/container_components"
+        app:layout_constraintTop_toBottomOf="@id/edit_nome_cliente"
+        android:autofillHints=""
+        android:maxLength="14"
+        tools:ignore="VisualLintTextFieldSize" />
+    <EditText
+        style="@style/Edit_Text"
+        android:id="@+id/edit_numero_tel"
+        android:hint="@string/Numero"
+        android:inputType="phone"
+        android:drawableEnd="@drawable/ic_telefone"
+        app:layout_constraintStart_toStartOf="@id/container_components"
+        app:layout_constraintEnd_toEndOf="@id/container_components"
+        app:layout_constraintTop_toBottomOf="@id/edit_cpf"
+        android:maxLength="15"
+        android:autofillHints=""
+        tools:ignore="VisualLintTextFieldSize" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:hint="@string/Endereco"
+        android:textColorHint="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/container_components"
+        app:layout_constraintStart_toStartOf="@+id/container_components"
+        app:layout_constraintTop_toBottomOf="@id/edit_numero_tel"
+        app:layout_constraintVertical_bias="0.166" />
+
+    <EditText
+        android:id="@+id/edit_rua"
+        style="@style/Edit_TextEnd"
+        android:autofillHints=""
+        android:hint="@string/Rua"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/edit_numero"
+        style="@style/Edit_TextEnd"
+        android:layout_width="100dp"
+        android:layout_marginStart="5dp"
+        android:autofillHints=""
+        android:hint="@string/casa"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/edit_numero_tel"
+        app:layout_constraintStart_toEndOf="@+id/edit_rua"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+    <EditText
+        android:id="@+id/edit_bairro"
+        style="@style/Edit_TextEnd"
+
+        android:autofillHints=""
+        android:hint="@string/Bairro"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/edit_rua"
+        app:layout_constraintTop_toBottomOf="@+id/edit_rua" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_atualizar_cliente"
+        style="@style/Button"
+        android:text="@string/atualizar"
+        android:textColor="#FFFDE7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container_components"
+        tools:ignore="TextSizeCheck,TextContrastCheck,VisualLintBounds" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

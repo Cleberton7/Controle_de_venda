@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context=".vendas.ActivityVendas"
+    tools:ignore="HardcodedText">
+
+    <TextView
+        android:id="@+id/title_cadastro_vendas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/cadastrar_venda"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <View
+        style="@style/ContainerComponentsCad"
+        android:id="@+id/container_components"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_cadastro_vendas" />
+
+    <EditText
+        android:id="@+id/edit_produtos_escolhidos"
+        style="@style/Edit_Text"
+        android:layout_width="270dp"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="28dp"
+        android:drawableEnd="@drawable/ic_codigo_produto"
+        android:hint="@string/produtosEscolhidos"
+        android:inputType="text"
+        android:importantForAutofill="no"
+        app:layout_constraintEnd_toStartOf="@+id/btn_escolherProdutos"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/container_components"
+        app:layout_constraintTop_toTopOf="@+id/container_components"
+        tools:ignore="MissingConstraints,UnknownId,VisualLintTextFieldSize" />
+
+    <ImageView
+        android:id="@+id/btn_escolherProdutos"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_buscar_produtos"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_produtos_escolhidos"
+        app:layout_constraintEnd_toEndOf="@+id/container_components"
+        app:layout_constraintTop_toTopOf="@+id/edit_produtos_escolhidos"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="ContentDescription" />
+
+    <EditText
+        style="@style/Edit_Text"
+        android:id="@+id/edit_cpf_cliente"
+        android:drawableEnd="@drawable/ic_client"
+        android:hint="@string/cpfCliente"
+
+        android:inputType="numberSigned"
+        android:autofillHints=""
+        app:layout_constraintEnd_toEndOf="@+id/container_components"
+        app:layout_constraintStart_toStartOf="@+id/container_components"
+        app:layout_constraintTop_toBottomOf="@+id/edit_produtos_escolhidos"
+        tools:ignore="MissingConstraints,UnknownId,VisualLintTextFieldSize" />
+
+    <EditText
+        android:id="@+id/edit_data_venda"
+        style="@style/Edit_Text"
+        android:layout_width="270dp"
+        android:layout_marginStart="20sp"
+        android:drawableEnd="@drawable/ic_data"
+        android:hint="@string/dataVenda"
+        android:inputType="date"
+        android:importantForAutofill="no"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toStartOf="@+id/bt_escolherData"
+        app:layout_constraintStart_toStartOf="@+id/container_components"
+        app:layout_constraintTop_toBottomOf="@+id/edit_valor_venda"
+        tools:ignore="VisualLintTextFieldSize" />
+
+
+    <ImageView
+        android:id="@+id/bt_escolherData"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_data_2"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_data_venda"
+        app:layout_constraintEnd_toEndOf="@+id/container_components"
+        app:layout_constraintTop_toTopOf="@+id/edit_data_venda"
+        tools:ignore="ContentDescription" />
+
+    <EditText
+        style="@style/Edit_Text"
+        android:id="@+id/edit_valor_venda"
+
+        android:hint="@string/valorVenda"
+        android:inputType="numberDecimal"
+        android:drawableEnd="@drawable/ic_din"
+        android:autofillHints=""
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edit_cpf_cliente"
+        app:layout_constraintTop_toBottomOf="@+id/edit_cpf_cliente"
+        tools:ignore="MissingConstraints,UnknownId,VisualLintTextFieldSize" />
+
+    <EditText
+        style="@style/Edit_Text"
+        android:id="@+id/edit_desconto"
+        android:layout_width="180dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="20sp"
+        android:drawableEnd="@drawable/ic_porcentagem"
+        android:hint="@string/desconto"
+        android:inputType="number"
+        android:visibility="invisible"
+        android:autofillHints=""
+        app:layout_constraintEnd_toEndOf="@+id/container_components"
+        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxDesconto"
+        app:layout_constraintTop_toBottomOf="@+id/edit_data_venda"
+        tools:ignore="VisualLintTextFieldSize" />
+
+    <EditText
+        style="@style/Edit_Text"
+        android:id="@+id/edit_prazo"
+        android:layout_width="180dp"
+        android:drawableEnd="@drawable/ic_prazo"
+        android:hint="@string/prazo"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/edit_desconto"
+        app:layout_constraintStart_toStartOf="@+id/edit_desconto"
+        app:layout_constraintTop_toBottomOf="@+id/edit_desconto"
+        tools:ignore="VisualLintTextFieldSize" />
+
+    <CheckBox
+        android:id="@+id/checkBoxDesconto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4sp"
+        android:text="Desconto"
+        app:layout_constraintStart_toStartOf="@+id/edit_data_venda"
+        app:layout_constraintTop_toTopOf="@+id/edit_desconto"
+        tools:ignore="UsingOnClickInXml" />
+
+    <CheckBox
+        android:id="@+id/checkBoxPrazo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4sp"
+        android:text="Avista "
+        app:layout_constraintStart_toStartOf="@+id/checkBoxDesconto"
+        app:layout_constraintTop_toTopOf="@+id/edit_prazo"
+        tools:ignore="UsingOnClickInXml" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/Button"
+        android:id="@+id/btn_cadastrar_venda"
+        android:text="@string/cadastrar"
+        android:textColor="#FFFDE7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container_components"
+        tools:ignore="TextSizeCheck,TextContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

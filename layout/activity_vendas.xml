@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    >
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+
+    <View
+        android:id="@+id/menuvendas"
+        style="@style/ContainerComponentsMenu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <View
+        android:id="@+id/container_button_cadastrarVendas"
+        style="@style/botãoPer"
+        android:background="@drawable/buttonspers"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="@id/menuvendas"
+        app:layout_constraintTop_toTopOf="@id/menuvendas"
+        tools:ignore="ContentDescription"
+
+        />
+
+    <ImageView
+        android:id="@+id/cadastrarVendas"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_cadastrar_vendas"
+        app:layout_constraintStart_toStartOf="@id/container_button_cadastrarVendas"
+        app:layout_constraintEnd_toEndOf="@id/container_button_cadastrarVendas"
+        app:layout_constraintBottom_toBottomOf="@id/container_button_cadastrarVendas"
+        app:layout_constraintTop_toTopOf="@id/container_button_cadastrarVendas"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textCad"
+        style="@style/Edit_Text_Menu2"
+        android:hint="Nova Venda"
+        app:layout_constraintEnd_toEndOf="@+id/container_button_cadastrarVendas"
+        app:layout_constraintStart_toStartOf="@+id/container_button_cadastrarVendas"
+        app:layout_constraintTop_toBottomOf="@+id/cadastrarVendas" />
+
+    <View
+        android:id="@+id/container_button_consultarVendas"
+        style="@style/botãoPer"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="60dp"
+        android:background="@drawable/buttonspers"
+        app:layout_constraintStart_toEndOf="@+id/container_button_cadastrarVendas"
+        app:layout_constraintTop_toTopOf="@id/menuvendas"
+        tools:ignore="ContentDescription" />
+
+
+    <ImageView
+        android:id="@+id/consultarVendas"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_buscar_venda"
+        app:layout_constraintStart_toStartOf="@id/container_button_consultarVendas"
+        app:layout_constraintEnd_toEndOf="@id/container_button_consultarVendas"
+        app:layout_constraintBottom_toBottomOf="@id/container_button_consultarVendas"
+        app:layout_constraintTop_toTopOf="@id/container_button_consultarVendas"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textCons"
+        style="@style/Edit_Text_Menu2"
+        android:hint="Consultar Vendas"
+        app:layout_constraintEnd_toEndOf="@+id/container_button_consultarVendas"
+        app:layout_constraintHorizontal_bias="0.58"
+        app:layout_constraintStart_toStartOf="@+id/container_button_consultarVendas"
+        app:layout_constraintTop_toBottomOf="@+id/consultarVendas" />
+
+    <View
+        android:id="@+id/container_button_listarVendas"
+        style="@style/botãoPer"
+        android:background="@drawable/buttonspers"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/menuvendas"
+        app:layout_constraintStart_toEndOf="@+id/container_button_consultarVendas"
+        app:layout_constraintTop_toTopOf="@+id/menuvendas"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/listarVendas"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_listar_todas"
+        app:layout_constraintStart_toStartOf="@id/container_button_listarVendas"
+        app:layout_constraintEnd_toEndOf="@id/container_button_listarVendas"
+        app:layout_constraintBottom_toBottomOf="@id/container_button_listarVendas"
+        app:layout_constraintTop_toTopOf="@id/container_button_listarVendas"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textListar"
+        style="@style/Edit_Text_Menu2"
+        android:hint="Listar Vendas"
+        app:layout_constraintEnd_toEndOf="@+id/container_button_listarVendas"
+        app:layout_constraintStart_toStartOf="@+id/container_button_listarVendas"
+        app:layout_constraintTop_toBottomOf="@+id/listarVendas" />
+
+
+    <View
+        android:id="@+id/container_button_deletarVendas"
+        style="@style/botãoPer"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/buttonspers"
+        app:layout_constraintStart_toStartOf="@+id/menuvendas"
+        app:layout_constraintTop_toBottomOf="@+id/textCad"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/deletarVendas"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_deletar1"
+        app:layout_constraintStart_toStartOf="@id/container_button_deletarVendas"
+        app:layout_constraintEnd_toEndOf="@id/container_button_deletarVendas"
+        app:layout_constraintBottom_toBottomOf="@id/container_button_deletarVendas"
+        app:layout_constraintTop_toTopOf="@id/container_button_deletarVendas"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textDeletar"
+        style="@style/Edit_Text_Menu2"
+        android:hint="Remover Vendas"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/container_button_deletarVendas"
+        app:layout_constraintStart_toStartOf="@+id/container_button_deletarVendas"
+        app:layout_constraintTop_toBottomOf="@+id/deletarVendas" />
+
+
+    <View
+        android:id="@+id/container_button_finalzarVenda"
+        style="@style/botãoPer"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="60dp"
+        android:background="@drawable/buttonspers"
+        app:layout_constraintStart_toEndOf="@+id/container_button_deletarVendas"
+        app:layout_constraintTop_toBottomOf="@+id/textCons"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/pagarVendas"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_pagar"
+        app:layout_constraintBottom_toBottomOf="@+id/container_button_finalzarVenda"
+        app:layout_constraintEnd_toEndOf="@+id/container_button_finalzarVenda"
+        app:layout_constraintStart_toStartOf="@+id/container_button_finalzarVenda"
+        app:layout_constraintTop_toTopOf="@+id/container_button_finalzarVenda"
+        tools:ignore="ContentDescription,RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/textFinalizar"
+        style="@style/Edit_Text_Menu2"
+        android:hint="Finaliza"
+        app:layout_constraintEnd_toEndOf="@+id/container_button_finalzarVenda"
+        app:layout_constraintStart_toStartOf="@+id/container_button_finalzarVenda"
+        app:layout_constraintTop_toBottomOf="@+id/pagarVendas" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".ActivityMenu">
+
+    <ImageView
+        android:id="@+id/imagView_btn_perfil"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+
+    <View
+        android:id="@+id/menuvendas"
+        style="@style/ContainerComponentsMenu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintVertical_bias="0.502" />
+
+    <View
+        android:id="@+id/container_button_vendas"
+        style="@style/botãoPer"
+        android:background="@drawable/buttonspers"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="40dp"
+        app:layout_constraintStart_toStartOf="@id/menuvendas"
+        app:layout_constraintTop_toTopOf="@id/menuvendas"
+        tools:ignore="ContentDescription"
+
+        />
+    <ImageView
+        android:id="@+id/imgVendas"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_venda"
+        app:layout_constraintStart_toStartOf="@id/container_button_vendas"
+        app:layout_constraintEnd_toEndOf="@id/container_button_vendas"
+        app:layout_constraintBottom_toBottomOf="@id/container_button_vendas"
+        app:layout_constraintTop_toTopOf="@id/container_button_vendas"
+        tools:ignore="ContentDescription">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/textVendas"
+        style="@style/Edit_Text_Menu2"
+        android:hint="@string/vendas"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/container_button_vendas"
+        app:layout_constraintStart_toStartOf="@+id/container_button_vendas"
+        app:layout_constraintTop_toBottomOf="@+id/imgVendas" />
+
+
+    <View
+        android:id="@+id/container_button_produto"
+        style="@style/botãoPer"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="50dp"
+        android:background="@drawable/buttonspers"
+        app:layout_constraintStart_toEndOf="@+id/container_button_vendas"
+        app:layout_constraintTop_toTopOf="@id/menuvendas"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/imgProduto"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_produtos"
+        app:layout_constraintStart_toStartOf="@id/container_button_produto"
+        app:layout_constraintEnd_toEndOf="@id/container_button_produto"
+        app:layout_constraintBottom_toBottomOf="@id/container_button_produto"
+        app:layout_constraintTop_toTopOf="@id/container_button_produto"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textProduto"
+        style="@style/Edit_Text_Menu2"
+        android:hint="@string/produto"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/container_button_produto"
+        app:layout_constraintStart_toStartOf="@+id/container_button_produto"
+        app:layout_constraintTop_toBottomOf="@+id/imgProduto" />
+
+
+    <View
+        android:id="@+id/container_button_cliente"
+        style="@style/botãoPer"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/buttonspers"
+        app:layout_constraintEnd_toEndOf="@+id/menuvendas"
+        app:layout_constraintStart_toEndOf="@+id/container_button_produto"
+        app:layout_constraintTop_toTopOf="@id/menuvendas"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/img_cliente"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_person"
+        app:layout_constraintStart_toStartOf="@id/container_button_cliente"
+        app:layout_constraintEnd_toEndOf="@id/container_button_cliente"
+        app:layout_constraintBottom_toBottomOf="@id/container_button_cliente"
+        app:layout_constraintTop_toTopOf="@id/container_button_cliente"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textCliente"
+        style="@style/Edit_Text_Menu2"
+        android:hint="@string/NomeCliente"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/container_button_cliente"
+        app:layout_constraintStart_toStartOf="@+id/container_button_cliente"
+        app:layout_constraintTop_toBottomOf="@+id/img_cliente" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

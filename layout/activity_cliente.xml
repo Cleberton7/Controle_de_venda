@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".clientes.ActivityCliente">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+
+    <View
+        android:id="@+id/menuvendas"
+        style="@style/ContainerComponentsMenu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintVertical_bias="0.584" />
+
+    <View
+        android:id="@+id/container_button_cadastrar_cliente"
+        style="@style/botãoPer"
+        android:background="@drawable/buttonspers"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintStart_toStartOf="@id/menuvendas"
+        app:layout_constraintTop_toTopOf="@id/menuvendas"
+        tools:ignore="ContentDescription"
+
+        />
+
+    <ImageView
+        android:id="@+id/cadastrarCliente"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_add_cliente"
+        app:layout_constraintStart_toStartOf="@id/container_button_cadastrar_cliente"
+        app:layout_constraintEnd_toEndOf="@id/container_button_cadastrar_cliente"
+        app:layout_constraintBottom_toBottomOf="@id/container_button_cadastrar_cliente"
+        app:layout_constraintTop_toTopOf="@id/container_button_cadastrar_cliente"
+        tools:ignore="ContentDescription" />
+
+
+    <TextView
+        android:id="@+id/textCadastrarCliente"
+        style="@style/Edit_Text_Menu2"
+        android:hint="@string/novoCliente"
+        app:layout_constraintEnd_toEndOf="@+id/container_button_cadastrar_cliente"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="@+id/container_button_cadastrar_cliente"
+        app:layout_constraintTop_toBottomOf="@+id/cadastrarCliente" />
+
+    <View
+        android:id="@+id/container_button_consultar_cliente"
+        style="@style/botãoPer"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="60dp"
+        android:background="@drawable/buttonspers"
+        app:layout_constraintStart_toEndOf="@+id/container_button_cadastrar_cliente"
+        app:layout_constraintTop_toTopOf="@id/menuvendas"
+        tools:ignore="ContentDescription" />
+
+
+    <ImageView
+        android:id="@+id/consultarCliente"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_consultar_cliente"
+        app:layout_constraintStart_toStartOf="@id/container_button_consultar_cliente"
+        app:layout_constraintEnd_toEndOf="@id/container_button_consultar_cliente"
+        app:layout_constraintBottom_toBottomOf="@id/container_button_consultar_cliente"
+        app:layout_constraintTop_toTopOf="@id/container_button_consultar_cliente"
+        tools:ignore="ContentDescription" />
+
+
+    <TextView
+        android:id="@+id/textConsultarCliente"
+        style="@style/Edit_Text_Menu2"
+        android:hint="@string/consultarCliente"
+        app:layout_constraintEnd_toEndOf="@+id/container_button_consultar_cliente"
+        app:layout_constraintStart_toStartOf="@+id/container_button_consultar_cliente"
+        app:layout_constraintTop_toBottomOf="@+id/consultarCliente" />
+
+    <View
+        android:id="@+id/container_button_listar_cliente"
+        style="@style/botãoPer"
+        android:background="@drawable/buttonspers"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="45dp"
+        app:layout_constraintEnd_toEndOf="@+id/menuvendas"
+        app:layout_constraintStart_toEndOf="@+id/container_button_consultar_cliente"
+        app:layout_constraintTop_toTopOf="@+id/menuvendas"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/listarCliente"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_listar_todas"
+        app:layout_constraintStart_toStartOf="@id/container_button_listar_cliente"
+        app:layout_constraintEnd_toEndOf="@id/container_button_listar_cliente"
+        app:layout_constraintBottom_toBottomOf="@id/container_button_listar_cliente"
+        app:layout_constraintTop_toTopOf="@id/container_button_listar_cliente"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textListarClientes"
+        style="@style/Edit_Text_Menu2"
+        android:hint="@string/listarCliente"
+        app:layout_constraintEnd_toEndOf="@+id/container_button_listar_cliente"
+        app:layout_constraintStart_toStartOf="@+id/container_button_listar_cliente"
+        app:layout_constraintTop_toBottomOf="@+id/listarCliente" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewListarCliente"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/menuvendas"
+        app:layout_constraintEnd_toEndOf="@+id/menuvendas"
+        app:layout_constraintStart_toStartOf="@+id/menuvendas"
+        app:layout_constraintTop_toBottomOf="@+id/textConsultarCliente" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
