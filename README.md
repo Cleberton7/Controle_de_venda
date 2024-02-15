@@ -1,0 +1,1 @@
+Este é um prototipo de uma aplicação mobile em java, de um estoque para vendas de cosméticos usando banco de dados sql. Em fase de desenvolvimento, o prototipo consiste em um estoque para controlar vendas e pedidos de cosméticos. 
